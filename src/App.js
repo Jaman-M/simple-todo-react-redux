@@ -1,24 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import TodoList from './TodoList';
+import Footer from './Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+            className="grid place-items-center bg-blue-100 h-screen px-6 font-sans"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+            
+            <Navbar></Navbar>
+
+            <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+                <Header></Header>
+                
+                <hr className="mt-4" />
+
+                
+                <TodoList></TodoList>
+
+                <hr className="mt-4" />
+
+                
+                <Footer></Footer>
+            </div>
+        </div>
   );
 }
 
